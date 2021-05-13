@@ -12,7 +12,7 @@ newsModel.getNews = async () => {
    * caracter raro
   **/
   let html = fetch(url + '/noticias/videojuegos').arrayBuffer();
-  const decoder = new TextDecoder('windows-1252');
+  const decoder = new TextDecoder('utf8'); // windows-1252
   html = decoder.decode(html)
 
   // ahora cargamos lo leído a cheerio
